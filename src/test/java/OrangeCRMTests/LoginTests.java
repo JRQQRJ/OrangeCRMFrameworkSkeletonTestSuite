@@ -5,6 +5,7 @@ import com.automation.pages.WelcomePage;
 import com.automationbytarun.components.DataProviderArgs;
 import com.automationbytarun.components.DataProviderUtils;
 import com.automationbytarun.components.TestActions;
+import jdk.nashorn.internal.parser.JSONParser;
 import org.testng.annotations.Test;
 
 public class LoginTests extends TestActions {
@@ -48,6 +49,7 @@ public class LoginTests extends TestActions {
         String welcomMsg = welcomePage.getWelcomeMessage();
         System.out.println(welcomMsg);
         Thread.sleep(3000);
+
 
     }
 
