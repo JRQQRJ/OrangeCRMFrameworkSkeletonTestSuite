@@ -1,0 +1,12 @@
+<suite name = "Smoke Suite" >
+        <parameter name="environment"  value="sit"/>
+    <test name ="LoginTests" >
+        <classes>
+            <class name = "OrangeCRMTests.LoginTests">
+                <include name ="validateLoginFunctionality"/>
+            </class>
+        </classes>
+    </test>
+</suite>
+
+<!--the name at the suite and test level do not matter and can be any-->

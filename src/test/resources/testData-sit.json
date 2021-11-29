@@ -1,0 +1,15 @@
+{
+  "validateLoginFunctionality": [
+    {
+      "username": "AdminSIT",
+      "password": "admin123",
+      "welcomeUser": "Welcome Safeena"
+    },
+    {
+      "username": "AdminSIt2",
+      "password": "admin1234",
+      "welcomeUser": "Welcome Safeena1"
+    }
+    ]
+
+}

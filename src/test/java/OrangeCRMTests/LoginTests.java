@@ -14,40 +14,40 @@ import org.testng.annotations.Test;
 public class LoginTests extends TestActions {
 
 //    @Test(invocationCount = 5) -->  to run the test 5 times
-//
-//    @DataProviderArgs("validateLoginFunctionality=username,password,welcomeUser")
-//    @Test(dataProviderClass = DataProviderUtils.class,dataProvider = "jsonDataProvider")
-//    public void validateLoginFunctionality(String username, String password,String welcomeMsg) throws InterruptedException {
-//        LoginPage loginPage = new LoginPage(driver.get());
-//        WelcomePage welcomePage = loginPage.enterUserName(username)
-//                .enterPassword(password)
-//                .clickLogin();
-//        Thread.sleep(3000);
-//        String welcomMsg = welcomePage.getWelcomeMessage();
-//        System.out.println(welcomMsg);
-//        Thread.sleep(3000);
-//        TestAsserts.checkIfValuesAreEqual(welcomMsg,welcomeMsg);
-//
-//    }
 
-
-    @Test
-    public void validateLoginFunctionalityUsingRandomData() throws InterruptedException {
-        String username = DataGenerator.getUsername();
-        String password = DataGenerator.getPassword();
+    @DataProviderArgs("validateLoginFunctionality=username,password,welcomeUser")
+    @Test(dataProviderClass = DataProviderUtils.class,dataProvider = "jsonDataProvider")
+    public void validateLoginFunctionality(String username, String password,String welcomeMsg) throws InterruptedException {
         LoginPage loginPage = new LoginPage(driver.get());
         WelcomePage welcomePage = loginPage.enterUserName(username)
                 .enterPassword(password)
                 .clickLogin();
         Thread.sleep(3000);
-        System.out.println("Username is: " + username);
-        System.out.println("Password is: " + password);
         String welcomMsg = welcomePage.getWelcomeMessage();
         System.out.println(welcomMsg);
         Thread.sleep(3000);
-        TestAsserts.checkIfValuesAreEqual(welcomMsg,"Tarun");
+        TestAsserts.checkIfValuesAreEqual(welcomMsg,welcomeMsg);
 
     }
+
+
+//    @Test
+//    public void validateLoginFunctionalityUsingRandomData() throws InterruptedException {
+//        String username = DataGenerator.getUsername();
+//        String password = DataGenerator.getPassword();
+//        LoginPage loginPage = new LoginPage(driver.get());
+//        WelcomePage welcomePage = loginPage.enterUserName(username)
+//                .enterPassword(password)
+//                .clickLogin();
+//        Thread.sleep(3000);
+//        System.out.println("Username is: " + username);
+//        System.out.println("Password is: " + password);
+//        String welcomMsg = welcomePage.getWelcomeMessage();
+//        System.out.println(welcomMsg);
+//        Thread.sleep(3000);
+//        TestAsserts.checkIfValuesAreEqual(welcomMsg,"Tarun");
+//
+//    }
 
 
 //    @Test
