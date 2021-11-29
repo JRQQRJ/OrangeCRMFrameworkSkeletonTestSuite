@@ -1,11 +1,13 @@
 <suite name = "Smoke Suite"  thread-count = "4" parallel = "methods">
-    <test name =" OrangeCRMTests" preserve-order=" false">
+    <listeners>
+        <listener class-name="com.automationbytarun.components.RetryTransformer"/>
+    </listeners>
+    <test name ="LoginTests" >
         <classes>
             <class name = "OrangeCRMTests.LoginTests">
-                <include name = "validateLoginFunctionality"/>
-                <include name = "validateLoginFunctionality1"/>
-                <include name = "validateLoginFunctionality2"/>
             </class>
         </classes>
     </test>
 </suite>
+
+<!--the name at the suite and test level do not matter and can be any-->
