@@ -1,5 +1,5 @@
 <suite name = "Smoke Suite" >
-        <parameter name="environment"  value="sit"/>
+<!--        <parameter name="environment"  value="sit"/>-->
     <test name ="LoginTests" >
         <classes>
             <class name = "OrangeCRMTests.LoginTests">

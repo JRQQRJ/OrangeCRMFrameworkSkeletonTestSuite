@@ -1,8 +1,8 @@
 <suite name = "Smoke Suite"  thread-count = "4" parallel = "methods">
-<!--    <listeners>-->
-<!--        <listener class-name="com.automationbytarun.components.RetryTransformer"/>-->
-<!--    </listeners>-->
-    <parameter name="environment"  value="sit"/>
+    <listeners>
+        <listener class-name="com.automationbytarun.components.RetryTransformer"/>
+    </listeners>
+<!--    <parameter name="environment" value="sit"/>-->
     <test name ="LoginTests" >
         <classes>
             <class name = "OrangeCRMTests.LoginTests">
