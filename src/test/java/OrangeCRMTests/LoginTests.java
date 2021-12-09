@@ -16,7 +16,7 @@ public class LoginTests extends TestActions {
 //    @Test(invocationCount = 5) -->  to run the test 5 times
 
     @DataProviderArgs("validateLoginFunctionality=username,password,welcomeUser")
-    @Test(dataProviderClass = DataProviderUtils.class,dataProvider = "jsonDataProvider")
+    @Test(dataProviderClass = DataProviderUtils.class,dataProvider = "jsonDataProvider",description =  "This is a test to validate the login functionality")
     public void validateLoginFunctionality(String username, String password,String welcomeMsg) throws InterruptedException {
         LoginPage loginPage = new LoginPage(driver.get());
         WelcomePage welcomePage = loginPage.enterUserName(username)
@@ -27,7 +27,7 @@ public class LoginTests extends TestActions {
         System.out.println(welcomMsg);
         Thread.sleep(3000);
         TestAsserts.checkIfValuesAreEqual(welcomMsg,welcomeMsg);
-
+//,description =  "This is a test to validate the login functionality"
     }
 
 

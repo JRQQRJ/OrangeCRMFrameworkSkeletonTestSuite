@@ -1,6 +1,7 @@
 <suite name = "Smoke Suite"  thread-count = "4" parallel = "methods">
     <listeners>
-        <listener class-name="com.automationbytarun.components.RetryTransformer"/>
+<!--        <listener class-name="com.automationbytarun.components.RetryTransformer"/>-->
+        <listener class-name="com.automationbytarun.components.TestActions"/>
     </listeners>
 <!--    <parameter name="environment" value="sit"/>-->
     <test name ="LoginTests" >

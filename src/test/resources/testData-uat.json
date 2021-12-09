@@ -1,19 +1,14 @@
 {
   "validateLoginFunctionality": [
     {
-      "username": "AdminUAT",
+      "username": "Admin",
       "password": "admin123",
-      "welcomeUser": "Welcome Safeena"
+      "welcomeUser": "Welcome Shiv"
     },
     {
       "username": "Admin1",
       "password": "admin1234",
       "welcomeUser": "Welcome Safeena1"
-    },
-    {
-      "username": "Admin2",
-      "password": "admin12345",
-      "welcomeUser": "Welcome Safeena2"
     }
 ]
 
